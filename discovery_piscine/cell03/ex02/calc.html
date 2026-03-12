@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculatrice</title>
+</head>
+<body>
+<h1> Calculatrice</h1>    
+
+<form id="calculatrice">
+
+    <!-- membre gauche -->
+    <input type="text" id="gauche">
+
+    <!-- opérateur -->
+    <select id="operateur">
+        <option value=".">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <!-- membre droit -->
+    <input type="text" id="droite">
+
+    <!-- bouton -->
+    <input type="submit" value="Try me!">
+
+</form>
+
+<script>
+
+document.getElementById("calculatrice").addEventListener("submit", function(e){
+
+    e.preventDefault(); // empêche le rechargement de la page
+
+    let gauche = document.getElementById("gauche").value;
+    let droite = document.getElementById("droite").value;
+    let operateur = document.getElementById("operateur").value;
+
+    gauche = Number(gauche);
+    droite = Number(droite);
+
+    // vérifier si ce sont des entiers positifs
+    if (!Number.isInteger(gauche) || !Number.isInteger(droite) || gauche < 0 || droite < 0){
+        alert("Error :(");
+        return;
+    }
+
+    // division ou modulo par 0
+    if ((operateur === "/" || operateur === "%") && droite === 0){
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+    }
+
+    let resultat;
+
+    if (operateur === "+") resultat = gauche + droite;
+    if (operateur === "-") resultat = gauche - droite;
+    if (operateur === "*") resultat = gauche * droite;
+    if (operateur === "/") resultat = gauche / droite;
+    if (operateur === "%") resultat = gauche % droite;
+
+    alert(resultat);
+    console.log(resultat);
+
+});
+
+// message toutes les 30 secondes
+setInterval(function(){
+    alert("Please, use me");
+}, 30000);
+
+</script>
+
+</body>
+</html>

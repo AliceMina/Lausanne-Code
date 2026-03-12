@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- taille initial+couleur+transforme carre en cercle parfait/Css -->
+<style> 
+  body{
+    display: flex;
+    justify-content: center; /* centre horizontalement */ 
+    align-items: center;     /* centre verticalement */
+    height: 100vh;           /* hauteur de la page */
+    margin: 0;
+}
+ 
+#ballon{
+    width:200px;
+    height:200px;
+    background-color:red;
+    border-radius:50%;
+}
+</style>
+</head>
+
+<body>
+    
+<div id="ballon"></div>
+<!-- variales principales en javascrip -->
+<script>
+let ballon = document.getElementById("ballon");
+let taille = 200;
+let couleurs = ["red","green","blue"];
+let indexCouleur = 0; <!--position dans le tableau-->
+
+ballon.onclick = function(){
+    
+    taille += 10;      
+    if(taille > 420){
+        taille = 200;
+        indexCouleur = 0;
+    } else {
+        indexCouleur = (indexCouleur + 1) % 3;
+    }
+
+    ballon.style.width = taille + "px";
+    ballon.style.height = taille + "px";
+    ballon.style.backgroundColor = couleurs[indexCouleur];
+};
+
+ballon.onmouseleave = function(){ 
+
+    taille -= 5;
+
+    if(taille < 200){
+        taille = 200;
+    }
+
+    indexCouleur--;
+
+    if(indexCouleur < 0){
+        indexCouleur = 2;
+    }
+
+    ballon.style.width = taille + "px";
+    ballon.style.height = taille + "px";
+    ballon.style.backgroundColor = couleurs[indexCouleur];
+};
+</script>
+
+</body>
+</html> 
+<!--ballon.onmouseleave= diminutiion, taille = -5 ballon retrecit de 5px,
+il ne peut jamais descemdre sous 200px-- Div sert a creer un bloc -->
