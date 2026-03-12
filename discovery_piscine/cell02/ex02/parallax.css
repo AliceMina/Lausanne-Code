@@ -1,0 +1,42 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Sections avec images */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Image du haut */
+.image1 {
+    background-attachment:fixed ;
+    background-image: url("photo 1.jpg");
+}
+
+/* Bloc noir */
+.black-block {
+    background: black;
+    color: white;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Image du bas */
+.image2 {
+    background-attachment:fixed ;
+    background-image: url("photo 2.jpg");
+}

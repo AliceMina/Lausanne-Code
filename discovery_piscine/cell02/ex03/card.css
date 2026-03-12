@@ -1,0 +1,62 @@
+body{
+    font-family: Arial;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+/* carte */
+.carte{
+    width: 300px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* tableau invisible */
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td{
+    text-align: center;
+    padding: 10px;
+}
+
+/* photo */
+.photo{
+    width: 120px;
+    border-radius: 50%;
+}
+
+/* login */
+.login{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* description */
+.description{
+    color: gray;
+}
+
+/* réseaux sociaux */
+.reseaux img{
+    width: 30px;
+    margin: 5px;
+}
+
+/* bouton */
+button{
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: gray;
+}

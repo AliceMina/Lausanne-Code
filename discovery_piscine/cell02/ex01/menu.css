@@ -1,0 +1,41 @@
+/* fond d'écran */
+body{
+  background-image: url("photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial;
+}
+
+/* menu */
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+/* éléments du menu */
+ul li{
+  display: inline-block;
+  position: relative;
+  padding: 15px;
+  color: #ffffffda;
+}
+
+/* sous-menu */
+.sous-menu{
+  display: none;
+  position: absolute;
+  background: black;
+  padding: 0;
+}
+
+/* éléments du sous-menu */
+.sous-menu li{
+  display: block;
+}
+
+/* afficher le sous-menu */
+li:hover .sous-menu{
+  display: block;
+}
